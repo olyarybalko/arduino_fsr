@@ -14,9 +14,8 @@ ou $V^+$ - la tension d'entré ($5~V$), $R_{FSR}$ - la résistance du capteur, q
 
 Pour chaque capteur, les équations d'étalonnage de la tension FSR à la charge appliquée  ont été déterminées en ajustant une équation logarithmique inverse comme recommandé [Interlink Electronics, 2015]:
 
-\begin{equation}
 F = a.e^{b.V} + c.e^{d.V}          
-\end{equation}
+
 
 où $F$ représente la force prédite à partir de l'équation d'étalonnage, la tension mesurée V du FSR et $a$, $b$, $c$ et $d$ sont des constantes à résoudre pour chaque capteur et une combinaison de variables.
 
