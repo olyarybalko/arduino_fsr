@@ -22,3 +22,41 @@ où $F$ représente la force prédite à partir de l'équation d'étalonnage, la
 Pour trouver les constantes on a utilisé la fonction   f = fit(x,y,'exp2') dans Matlab.
 
 Grace à l'approximation des tensions appliquées on a obtenu les courbes, qui sont illustrés aux Fig. \ref{fig_7}-\ref{fig_9}.
+
+
+******* Start init *****
+1.30
+2.30
+3.30
+4.30
+***********************
+1.50
+2.50
+3.50
+4.50
+******* End init ******
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+100.04
+124.73
+
