@@ -33,7 +33,7 @@ Grace à l'approximation des tensions appliquées on a obtenu les courbes, qui s
 
 4.30
 
-***********************
+********* Second **************
 
 1.50
 
