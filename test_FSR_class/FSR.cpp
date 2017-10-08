@@ -6,9 +6,10 @@
 */
 
 #include "Arduino.h"
-#include <Wire.h>
+
 #include "FSR.h"
 
+/*Ce constructeur est envoque automatiquement lors de la declaration d'une instance de la classe */
 
 FSR::FSR(int pin)
 {
@@ -27,6 +28,13 @@ void FSR::set_i2c_addr(int address)
   //TO DO check if the adress is correct
     _address = address;
 }
+/*
+Cette partie decrit des manipulateurs pour initialises les attributes, donc je créé,
+comme programmeur developpeur de la classe, 
+une possibilite d'initialisation  des parametters.
+C'est exactement un programmeur utilisateur du classe connais
+le type de l'equipement et c'est a lui de definir via calibration des coefficients d'approximation
+*/
 
 void FSR::set_coef_a(double value)
 { 
@@ -47,6 +55,8 @@ void FSR::set_coef_d(double value)
 { 
     _d = value;
 }
+
+/* getters */
 
 double FSR::get_coef_a(void)
 { 
