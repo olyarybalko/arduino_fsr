@@ -10,8 +10,8 @@ void setup()
 {
 Serial.begin(9600);
 
-    sensor_hand.set_i2c_addr(6);
-    sensor_flor.set_i2c_addr(6);
+    sensor_hand.set_i2c_addr(4);
+    sensor_flor.set_i2c_addr(4);
     
     /* appel des methodes specifiques */
     /* Le programmer l'utilisateur doit definir à l'avance */
