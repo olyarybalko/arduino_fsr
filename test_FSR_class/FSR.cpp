@@ -80,40 +80,51 @@ double FSR::get_coef_d(void)
 
 double FSR::get_force()
 { 
-  Serial.println("get_force");
-  
-  union asdf
-  {
-  char asd[2];
-  int dsa;
-  } fdsa;
-     int  i = 0;
-  
-  if (_address == -1){
-    Serial.println("ERROR, Address does not well defined");
-    return -1.1;}
+  Serial.print ("get_force ");
+  Serial.println (_address);
+//  
+//  union asdf
+//  {
+//  char asd[2];
+//  int dsa;
+//  } fdsa;
+//     int  i = 0;
+//  
+//  if (_address == -1){
+//    Serial.println("ERROR, Address does not well defined");
+//    return -1.1;}
 
 
  
     
-  Wire.beginTransmission(_address); // transmit to device #4
-  Wire.write( _pin);              // sends one byte
-  Wire.endTransmission();    // stop transmitting
-  
-  Serial.println("end transmission");
+//  Wire.beginTransmission(_address); // transmit to device #4
+//  Wire.write( _pin);              // sends one byte
+//  Wire.endTransmission();    // stop transmitting
+//  
+//  Serial.println("end transmission");
    
   Wire.requestFrom(_address, 2);    // request 10 bytes from slave device #8
 
 
  
-  while (Wire.available() && i <= 2) { // slave may send less than requested
-      Serial.print(i); Serial.print(" ");
-      fdsa.asd[i] = Wire.read(); // receive a byte as character
-      i++;
-    //Serial.print(c);         // print the character
-  }
+//  while (Wire.available() && i <= 2) { // slave may send less than requested
+//      Serial.print(i); Serial.print(" ");
+//      fdsa.asd[i] = Wire.read(); // receive a byte as character
+//      i++;
+//    //Serial.print(c);         // print the character
+//  }
+//
+//
+//   //return _a*pow(2.17,_b) + _c*pow(2.17,_d);
+//   return fdsa.dsa;
+int receivedValue;
+     Wire.requestFrom(4, 12);    // request 6 bytes from slave device #2
+  while(Wire.available()){    // slave may send less than requested
+    receivedValue  = Wire.read() << 8;
+    receivedValue |= Wire.read();
+    Serial.print(receivedValue);
+Serial.print(" ");  }
+Serial.println();
 
-
-   //return _a*pow(2.17,_b) + _c*pow(2.17,_d);
-   return fdsa.dsa;
+   return receivedValue;
 }

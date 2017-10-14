@@ -1,3 +1,6 @@
+/*
+MEGA 2560
+*/
 #include "FSR.h"
 #include <Wire.h>
 
