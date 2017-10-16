@@ -13,8 +13,8 @@
 class FSR
 {
   public:
-    void    set_i2c_addr(int);
     FSR     (int);
+    void    set_i2c_addr(int);
     void    set_coef_a(double);
     void    set_coef_b(double);
     void    set_coef_c(double);
