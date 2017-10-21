@@ -38,32 +38,33 @@ loop()
 
 {
   int i;
-  for (i = 0; i < 0; i < nb_of_pins)
-    input[i] = 500;// analogRead(pin);
+  for (i = 0; i < nb_of_pins; i++)
+    input[i] = i;// analogRead(pin);
 }
 
 void
 requestEvent()
 
 {
-  uint8_t buffer[2* nb_of_pins];
+  uint8_t buffer[2*nb_of_pins];
   int i;
   
-  for (i = 0; i < 0; i < nb_of_pins)
+  for (i = 0; i < nb_of_pins; i ++)
  {
-  buffer[i] = input[i] >> 8;
-  buffer[i+1] = input[i] & 0xff;
+  buffer[2*i]   = input[i] >> 8;
+  buffer[2*i+1] = input[i] & 0xff;
  }
-  Wire.write(buffer, 2);
+  Wire.write(buffer, 2* nb_of_pins);
 }
 
+//Not used
 void
 receiveEvent(int howMany)
 {
   int x;
   while (1 < Wire.available()) // loop through all but the last
     x = Wire.read();    // receive byte as an integer
-  x == 1 ? pin = 1 : pin = 0;
+
     
 
 }

@@ -107,11 +107,16 @@ double
 FSR::get_force()
 
 {
-  int receivedValue;
-  
+  int nb = 8,i, receivedValue;
+  double force;
   Serial.print ("get_force ");
   
-  Serial.println (_address);
+  Serial.print (_address); 
+  Serial.print (" ");
+  Serial.print (_pin); 
+  Serial.print (" ");
+  Serial.print (this->_a); 
+  Serial.print (" ");
   
   if (_address == -1)
   {
@@ -119,12 +124,21 @@ FSR::get_force()
     return -1.1;
   }
   
-  Wire.requestFrom(_address, 2);    // request 2 bytes from slave device #_address
-  
+  Wire.requestFrom(_address, 16);    // request 16 bytes from slave device #_address
+  i = 0;
   while(Wire.available())
   {    // slave may send less than requested
     receivedValue  = Wire.read() << 8;
     receivedValue |= Wire.read();
+    
+    Serial.print (receivedValue); 
+    Serial.print (" ");
+    
+    if(i==_pin) 
+    {
+      force =  receivedValue;
+    }
+    i++;
   } 
   return receivedValue;
 }
