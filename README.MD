@@ -13,6 +13,11 @@ où $F$ représente la force prédite à partir de l'équation d'étalonnage, la
 
 Pour trouver les constantes on a utilisé la fonction   f = fit(x,y,'exp2') dans Matlab.
 
+une schema du mise en place des microcontroleurs est presente
+https://www.tinkercad.com/things/7MTtN5MlWVk-fabulous-borwo-hango/editel?sharecode=0hwKuulfnewsQBzYmb8pIYtYYfpcV2A0WH9uxV-qnfk=
+
+
+# Creation de la classe FSRc
 
 Pour commencer le projet je crée la classe FSR :
 
