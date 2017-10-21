@@ -140,7 +140,7 @@ FSR::get_force()
     }
     i++;
   } 
-  return receivedValue;
+  return force;
 }
 
 
