@@ -4,17 +4,18 @@ MEGA 2560
 #include "FSR.h"
 #include <Wire.h>
 
-//Classe instance(la broche via laquelle on connecte la résistance vers CAN)
-FSR sensor_hand(13);
-FSR sensor_flor(12);
+//Classe instance(l'adresse du uC escalave )
+FSR sensor_hand(4);
+FSR sensor_flor(4);
 // le cas courant c'est l'utilisation des plusieurs capteurs
 
 void setup()
 {
 Serial.begin(9600);
 
-    sensor_hand.set_i2c_addr(4);
-    sensor_flor.set_i2c_addr(4);
+//(la broche via laquelle  la résistance est  connectee vers CAN)
+    sensor_hand.set_i2c_pin(0);
+    sensor_flor.set_i2c_pin(1);
     
     /* appel des methodes specifiques */
     /* Le programmer l'utilisateur doit definir à l'avance */

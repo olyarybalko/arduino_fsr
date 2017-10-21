@@ -11,24 +11,26 @@
 
 /*Ce constructeur est envoque automatiquement lors de la declaration d'une instance de la classe */
 
-FSR::FSR(int pin)
+FSR::FSR(int address)
 {
+  // TODO check if the address is correct
+  
   Wire.begin();        // join i2c bus (address optional for master)
   _a = 0.0;
   _b = 0.0;
   _c = 0.0;
   _d = 0.0;
-  _address = -1;
-  _pin = pin;
+  _address = address;
+  _pin = 0;
 }
 
 
 void
-FSR::set_i2c_addr(int address)
+FSR::set_i2c_pin(int pin)
 
 { 
-  //TO DO check if the adress is correct
-    _address = address;
+  //TO DO check if the pin is correct
+    _pin = pin;
 }
 /*
 Cette partie decrit des manipulateurs pour initialises les attributes, donc je créé,
@@ -121,3 +123,5 @@ FSR::get_force()
   } 
   return receivedValue;
 }
+
+

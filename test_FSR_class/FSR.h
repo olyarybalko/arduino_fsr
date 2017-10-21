@@ -13,8 +13,8 @@
 class FSR
 {
   public:
-    FSR     (int);
-    void    set_i2c_addr(int);
+    FSR     (int);// constructor uses addresse of slave uC
+    void    set_i2c_pin(int);
     void    set_coef_a(double);
     void    set_coef_b(double);
     void    set_coef_c(double);
