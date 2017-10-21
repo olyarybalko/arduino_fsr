@@ -18,28 +18,45 @@ une schema du mise en place des microcontroleurs est presente
 https://www.tinkercad.com/things/7MTtN5MlWVk-fabulous-borwo-hango/editel?sharecode=0hwKuulfnewsQBzYmb8pIYtYYfpcV2A0WH9uxV-qnfk=
 
 data is loaded from file Calibration_1_123D.txt, data contains 25 rows and 2 columns
+
 -3219.096241
+
 2.190379
+
 3231.599754
+
 2.189066
 
 data is loaded from file Calibration_2_126AF.txt, data contains 25 rows and 2 columns
+
 7.653104
+
 1.098430
+
 -8.284287
+
 -2.919219
 
 data is loaded from file Calibration_3_123D.txt, data contains 25 rows and 2 columns
+
 68.332017
+
 0.623610
+
 0.000000
+
 0.623610
 
 data is loaded from file Calibration_4_123BC.txt, data contains 25 rows and 2 columns
+
 9.046536
+
 1.105736
+
 -9.402752
+
 -2.026341
+
 
 # Creation de la classe FSRc
 
