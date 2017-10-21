@@ -31,6 +31,11 @@ FSR::set_i2c_pin(int pin)
 { 
   //TO DO check if the pin is correct
     _pin = pin;
+    
+  Wire.beginTransmission(_address); // transmit to device #_address
+  Wire.write(_pin);              // sends one byte
+  Wire.endTransmission();    // stop transmitting
+    
 }
 /*
 Cette partie decrit des manipulateurs pour initialises les attributes, donc je créé,
