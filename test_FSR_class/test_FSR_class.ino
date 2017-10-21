@@ -18,14 +18,15 @@ Serial.begin(9600);
     
     /* appel des methodes specifiques */
     /* Le programmer l'utilisateur doit definir à l'avance */
-    sensor_hand.set_coef_a(1.3);
-    sensor_hand.set_coef_b(2.3);
-    sensor_hand.set_coef_c(3.3);
-    sensor_hand.set_coef_d(4.3);
-    sensor_flor.set_coef_a(1.5);
-    sensor_flor.set_coef_b(2.5);
-    sensor_flor.set_coef_c(3.5);
-    sensor_flor.set_coef_d(4.5);
+    /* dans le README.MD il y a des explications de la provenance des coefficients*/
+    sensor_hand.set_coef_a(9.046536);
+    sensor_hand.set_coef_b(1.105736);
+    sensor_hand.set_coef_c(-9.402752);
+    sensor_hand.set_coef_d(-2.026341);
+    sensor_flor.set_coef_a(9.046536);
+    sensor_flor.set_coef_b(1.105736);
+    sensor_flor.set_coef_c(-9.402752);
+    sensor_flor.set_coef_d(-2.026341);
     Serial.println("******* Start init *****");
     Serial.println(sensor_hand.get_coef_a());
     Serial.println(sensor_hand.get_coef_b());

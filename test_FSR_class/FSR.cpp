@@ -112,17 +112,12 @@ FSR::get_force()
     return -1.1;
   }
   
-  Wire.requestFrom(_address, 12);    // request 12 bytes from slave device #_address
+  Wire.requestFrom(_address, 2);    // request 2 bytes from slave device #_address
   
   while(Wire.available())
   {    // slave may send less than requested
     receivedValue  = Wire.read() << 8;
     receivedValue |= Wire.read();
-    Serial.print(receivedValue);
-    Serial.print(" ");
-  }
-  
-  Serial.println();
-  
+  } 
   return receivedValue;
 }

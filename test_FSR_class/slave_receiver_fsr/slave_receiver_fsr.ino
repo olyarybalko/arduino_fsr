@@ -12,6 +12,9 @@
 
 #include <Wire.h>
 
+//a range of -32,768 to 32,767
+unsigned int input = 0;
+  
 void setup()
 {
   Wire.begin(4);                // join i2c bus with address #4
@@ -42,36 +45,11 @@ delay(100);
 
 void requestEvent()
 {
-  //a range of -32,768 to 32,767
-  int input = 11111;//analogRead(0);
-  uint8_t buffer[12];
+  uint8_t buffer[2];
+  input = 111;//analogRead(0);
   buffer[0] = input >> 8;
   buffer[1] = input & 0xff;
   
-     input = 222;//analogRead(1);
-  
-  buffer[2] = input >> 8;
-  buffer[3] = input & 0xff;
- 
-    input = 333;//analogRead(2);
-
-  buffer[4] = input >> 8;
-  buffer[5] = input & 0xff;
-
-    input = 444;//analogRead(3);
-  
-  buffer[6] = input >> 8;
-  buffer[7] = input & 0xff;
-
-    input = 555;//analogRead(6);
-  
-  buffer[8] = input >> 8;
-  buffer[9] = input & 0xff;
-  
-    input = 666;//analogRead(7);
-  
-  buffer[10] = input >> 8;
-  buffer[11] = input & 0xff;
-  Wire.write(buffer, 12);
+  Wire.write(buffer, 2);
   
 }
