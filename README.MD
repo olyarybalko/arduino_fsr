@@ -105,36 +105,40 @@ Reflechir a propos de const comme predicat.
 Resultat de l'execution du code .ino
 Cela n'a pas du sence l'initialisation au piff
 
-F1 (V) = 1.3*e^(2.3*V1) + 3.33*e^{4.3*V1}
-F2 (V) = 1.5*e^(2.5*V1) + 3.5*e^{4.5*V1}
+F1 (V1) = 9.046536*e^(1.105736*V1) - 9.402752*e^{-2.026341*V1}
+F2 (V2) = 7.653104*e^(1.098430*V2) - 8.284287*e^{-2.919219*V2}
 
+Pour cette parametres
 
+sensor_hand.set_i2c_pin(3);
+sensor_flor.set_i2c_pin(4);
+
+sensor_hand.set_coef_a(9.046536);
+sensor_hand.set_coef_b(1.105736);
+sensor_hand.set_coef_c(-9.402752);
+sensor_hand.set_coef_d(-2.026341);
+sensor_flor.set_coef_a(7.653104);
+sensor_flor.set_coef_b(1.098430);
+sensor_flor.set_coef_c(-8.284287);
+sensor_flor.set_coef_d(-2.919219);
+    
+# Debug
 ******* Start init *****
-1.30
-2.30
-3.30
-4.30
+9.05
+1.11
+-9.40
+-2.03
 ***********************
-1.50
-2.50
-3.50
-4.50
+7.65
+1.10
+-8.28
+-2.92
 ******* End init ******
-get_force 4
-11111 222 333 444 555 666
-666.00
-get_force 4
-11111 222 333 444 555 666
-666.00
-get_force 4
-11111 222 333 444 555 666
-666.00
-get_force 4
-11111 222 333 444 555 666
-666.00
-get_force 4
-11111 222 333 444 555 666
-666.00
-get_force 4
-11111 222 333 444 555 666
-666.00
+ get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+ get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+ get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+ get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+ get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+ get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+ get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+
