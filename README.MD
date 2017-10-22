@@ -9,7 +9,7 @@ Pour une simple conversion force-tension, le dispositif FSR est lié à une rés
 F (V) = a.e^{b.V} + c.e^{d.V}          
 
 
-où $F$ représente la force prédite à partir de l'équation d'étalonnage, la tension mesurée V du FSR et $a$, $b$, $c$ et $d$ sont des constantes à résoudre pour chaque capteur et une combinaison de variables.
+où F représente la force prédite à partir de l'équation d'étalonnage, la tension mesurée V du FSR et a, b, c et d sont des constantes à résoudre pour chaque capteur et une combinaison de variables.
 
 Pour trouver les constantes on a utilisé la fonction   f = fit(x,y,'exp2') dans Matlab.
 
@@ -58,7 +58,7 @@ data is loaded from file Calibration_4_123BC.txt, data contains 25 rows and 2 co
 -2.026341
 
 
-# Creation de la classe FSRc
+# Creation de la classe FSR
 
 Pour commencer le projet je crée la classe FSR :
 
@@ -70,7 +70,7 @@ il est preferable d'attribuer le nom parlant pour votre class, dans ce cas c'est
 
 Bien sur class contiendra de méthodes et d'attributs.
 
-de variables, ici appelées attributs (on parle aussi de variables membres) ; de fonctions, ici appelées méthodes (on parle aussi de fonctions membres). :
+de variables, ici appelées attributs (on parle aussi de variables membres) ; de fonctions, ici appelées méthodes (on parle aussi de fonctions membres). 
 
 Cette étape demande de réflexion et de comprehension du mecanisme de communication entre dispositifs physiques pour lesquel le classe sera developpé. Avant le codage est essentielle quand on fait de la POO. Les méthodes, elles, sont grosso modo les actions que le personnage peut effectuer ou qu'on peut lui faire faire.
 
