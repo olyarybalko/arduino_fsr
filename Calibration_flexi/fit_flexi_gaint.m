@@ -1,15 +1,5 @@
 close all, clear all, clc
 
-% old
-%ydata = [  2. , 12. , 22. ,  32. ,  42. ,  52. ,  62.,   70. , ...
-% 80. ,  90. , 100., 120. , 140. , 160.  ,180.  ,200. , 250. , 300., ...
-%340.]';
-%
-%xdata = [  567. ,  680. ,  702.  , 716. ,  727. ,  733.  , ...
-%740.,   746.  , 750.  , 755.,  759. ,  762.  , 766. ,  770. ,  773. , ...
-%774.5 , 778. ,  781.,   783. ]';
-
-
 set(0,'DefaultAxesFontSize',12,'DefaultAxesFontName','Times New Roman')
 [filename, pathname] = uigetfile('*','Data file name');
 
@@ -27,8 +17,6 @@ ydata= data_from_file(:,1);
 xdata= data_from_file(:,2);
 
 xdata = xdata.*5/1023;
-
-
 
 figure (1)
 
@@ -58,5 +46,3 @@ title(filename)
 legend('approximation fitting', 'experimental data','Location','northwest');
 set(findall(gcf,'-property','FontSize'),'FontSize',14)
 saveas(gcf,strcat(filename,'.png'))
-
-break
