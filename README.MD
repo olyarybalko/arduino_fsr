@@ -1,7 +1,9 @@
 
-#
+# Avant propos
+
 In the master branch I puting v.0.1 product which can be downloaded by final users.
 https://stackoverflow.com/questions/20755434/what-is-the-master-branch-and-release-branch-for
+
 I have the devel branch to test features.
 
 # Introduction
