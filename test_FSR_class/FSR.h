@@ -13,8 +13,10 @@
 class FSR
 {
   public:
-    FSR     (int);// constructor uses addresse of slave uC
+    FSR (int , int ,  double , double, double, double );// constructor uses addresse of slave uC
+    // si en cours de lexecution il faut changer la broche
     void    set_i2c_pin(int);
+    // si en cours d'execution il fqut changer le coeficient en fonction de temperature
     void    set_coef_a(double);
     void    set_coef_b(double);
     void    set_coef_c(double);

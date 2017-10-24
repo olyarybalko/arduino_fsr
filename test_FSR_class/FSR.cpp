@@ -12,17 +12,17 @@
 
 /*Ce constructeur est envoque automatiquement lors de la declaration d'une instance de la classe */
 
-FSR::FSR(int address)
+FSR::FSR(int address, int pin,  double a, double b, double c = 0.0, double d = 0.0)
 {
   // TODO check if the address is correct
 
   Wire.begin();        // join i2c bus (address optional for master)
-  _a = 0.0;
-  _b = 0.0;
-  _c = 0.0;
-  _d = 0.0;
+  _a = a;
+  _b = b;
+  _c = c;
+  _d = d;
   _address = address;
-  _pin = 0;
+  _pin = pin;
 }
 
 
