@@ -12,8 +12,15 @@
 #include <Wire.h>
 class FSR
 {
+  private:
+    int     _address;
+    int     _pin;
+    double  _a;
+    double  _b;
+    double  _c;
+    double  _d;
   public:
-    FSR (int , int ,  double , double, double, double );// constructor uses addresse of slave uC
+    FSR (int address, int pin,  double a, double b, double c, double d);// constructor uses addresse of slave uC
     // si en cours de lexecution il faut changer la broche
     void    set_i2c_pin(int);
     // si en cours d'execution il fqut changer le coeficient en fonction de temperature
@@ -26,13 +33,7 @@ class FSR
     double  get_coef_c(void);
     double  get_coef_d(void);
     double  get_force();
-  private:
-    int     _address;
-    int     _pin;
-    double  _a;
-    double  _b;
-    double  _c;
-    double  _d;
+  
     
 };
 
