@@ -6,6 +6,9 @@ https://stackoverflow.com/questions/20755434/what-is-the-master-branch-and-relea
 
 I have the devel branch to test features.
 
+To build the OOP I had inspired from
+https://www.arduino.cc/en/Hacking/LibraryTutorial
+
 # Introduction
 
 Les résistances sensibles à la force (angl. FSR) sont des capteurs de forces à film polymères mince. Ce capteur est disponible dans le commerce et il est couramment utilisés dans une multitude d'applications de mesure biomécaniques ou dans la robotique interactive. Les raisons de cette utilisation étendue résident dans la polyvalence, le faible profil et le faible coût de ces capteurs.
