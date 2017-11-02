@@ -179,3 +179,5 @@ sensor_flor.set_coef_d(-2.919219);
  get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
 
  get_force 4 3 9.05 0 1 2 3 4 5 6 7 3.00 get_force 4 4 7.65 0 1 2 3 4 5 6 7 4.00
+ 
+ +![primer](https://www.dropbox.com/s/ggn4gkqm79kxwtz/proposed.png?dl=0)
