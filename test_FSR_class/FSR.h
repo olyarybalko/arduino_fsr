@@ -4,37 +4,33 @@
   Created by Olga Melnyk, September 25, 2017.
   Released into the public domain.
 */
-
-#ifndef FSR_h
-#define FSR_h
+#ifndef FSR_H
+#define FSR_H
 
 #include "Arduino.h"
-#include <Wire.h>
-class FSR
+#include "Sensor.h"
+class FSR : public Sensor
 {
   private:
-    int     _address;
-    int     _pin;
     double  _a;
     double  _b;
     double  _c;
     double  _d;
+   
   public:
-    FSR (int address, int pin,  double a, double b, double c, double d);// constructor uses addresse of slave uC
-    // si en cours de lexecution il faut changer la broche
-    void    set_i2c_pin(int);
+
+    FSR (int pin, double a, double b, double c, double d);
+    
     // si en cours d'execution il fqut changer le coeficient en fonction de temperature
-    void    set_coef_a(double);
-    void    set_coef_b(double);
-    void    set_coef_c(double);
-    void    set_coef_d(double);
+    
+    bool is_avaible(); 
+    void    set_coef(double a, double b, double c, double d);
     double  get_coef_a(void);
     double  get_coef_b(void);
     double  get_coef_c(void);
     double  get_coef_d(void);
     double  get_force();
-  
+    double convert(double mes);
     
 };
-
 #endif
